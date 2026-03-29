@@ -49,11 +49,13 @@ body {
 /*  Card  */
 .card {
   background: var(--white);
+  /* background-color: orange; */
   border-radius: var(--radius);
   border: 2px dashed rgba(58,11,63,0.35);
   padding: 3rem 3.5rem;
-  width: 100%;
-  max-width: 860px;
+  width: fit-content;
+  /* width: 800px; */
+  /* max-width: 100%; */
   box-shadow: 0 20px 60px rgba(0,0,0,0.35);
 }
 
@@ -210,14 +212,18 @@ body {
 
 /*  Canvas  */
 .canvas-wrapper {
+  width: fit-content;
   display: flex;
   justify-content: center;
+  align-items: center;
+  justify-self: center;
   padding: 1.5rem;
   background: var(--green-dim);
   border-radius: var(--radius);
   margin-bottom: 1rem;
-  overflow-x: auto;
+  /* overflow-x: auto; */
 }
+
 #canvas {
   background: var(--white);
   border: 3px solid var(--green);

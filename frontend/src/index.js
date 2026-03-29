@@ -9,6 +9,10 @@
 
 'use strict';
 
+const API_BASE = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3000'
+  : 'https://zero034-1-portfolio-ver-ann-forward.onrender.com'; // localhost or Render.com API
+
 //  Canvas setup 
 const canvas = document.getElementById('canvas');
 const ctx    = canvas.getContext('2d');
@@ -271,7 +275,7 @@ inputForm.addEventListener('submit', async (e) => {
 
   let data;
   try {
-    const response = await fetch('https://zero034-1-portfolio-ver-ann-forward.onrender.com/run-network', {
+    const response = await fetch(`${API_BASE}/run-network`, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({
