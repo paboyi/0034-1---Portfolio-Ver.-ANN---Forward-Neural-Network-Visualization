@@ -1,5 +1,6 @@
 import path from 'path';
 import Express, { Request, Response } from 'express';
+import cors from 'cors';
 
 import { EActivationFunction } from './lib/neuronal-net/activation-functions';
 import NeuronalNet from './lib/neuronal-net/neuronal-net';
@@ -8,8 +9,9 @@ const app = Express();
 const PORT = process.env.PORT ?? 3000;
 
 //  Middleware 
-app.use(Express.json());                             // built-in body parser (Express ≥ 4.16)
-app.use(Express.static(path.join(__dirname)));       // serves index.html, styles.css, index.js …
+app.use(cors()); // allows your Vercel frontend to call this
+app.use(Express.json()); // built-in body parser (Express ≥ 4.16)
+app.use(Express.static(path.join(__dirname))); // serves index.html, styles.css, index.js …
 
 //  Routes 
 app.get('/', (_req: Request, res: Response) => {
@@ -67,5 +69,6 @@ app.post('/run-network', (req: Request, res: Response) => {
 
 //  Start 
 app.listen(PORT, () => {
-  console.log(`✓ ANN Visualizer running at http://localhost:${PORT}`);
+  // console.log(`✓ ANN Visualizer running at http://localhost:${PORT}`);
+  console.log(`✓ ANN API running on port ${PORT}`);
 });

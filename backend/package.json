@@ -11,11 +11,13 @@
     "dev": "npx ts-node --watch src/index.ts"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^4.17.21",
     "@types/node": "^22.10.5",
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^4.21.2"
   }
 }
