@@ -176,6 +176,7 @@ This is a forward-propagation visualizer, not a trainer. Weights are randomised 
 ---
 
 ## Author
+Philippa Aboyi
 
-Built as part of an AI thesis project.  
+Built as an extension of my BSc AI thesis project.  
 [GitHub](https://github.com/paboyi/AI-Thesis---Forward-Neural-Network-Visualization)
