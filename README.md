@@ -4,7 +4,7 @@ An interactive, full-stack tool for building and running your own artificial neu
 
 Configure the topology, submit inputs, and watch activations propagate live through a canvas-rendered network.
 
-![ANN Visualizer screenshot](src/img/ArtificialNeuronNetworkModel_1.png)
+![ANN Visualizer screenshot](src/img/ArtificialNeuronNetworkModel_2.png)
 
 ---
 
