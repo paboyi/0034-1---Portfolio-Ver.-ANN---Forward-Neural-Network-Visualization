@@ -1,5 +1,5 @@
 /**
- * ANN Visualizer — Frontend
+ * ANN Visualizer. Frontend
  *
  * Responsibilities:
  *  1. Collect topology config from the user (inputs, hidden layers, output count)
@@ -38,7 +38,7 @@ const PRESETS = {
     hiddenLayers: [4],
     outputCount: 2,
     sampleInput: '0, 1',
-    description: 'Classic XOR logic gate — tests non-linear separability.',
+    description: 'Classic XOR logic gate. Tests non-linear separability.',
   },
   classifier: {
     label: '3-Class Classifier',
@@ -54,7 +54,7 @@ const PRESETS = {
     hiddenLayers: [6, 6, 4],
     outputCount: 2,
     sampleInput: '1, 0.5, 0.2',
-    description: 'Deeper architecture — watch activations propagate through many layers.',
+    description: 'Deeper architecture: watch activations propagate through many layers.',
   },
   single: {
     label: 'Single Neuron',
@@ -62,7 +62,7 @@ const PRESETS = {
     hiddenLayers: [1],
     outputCount: 1,
     sampleInput: '0.4, 0.7',
-    description: 'Stripped-back network — one hidden neuron. Great for learning the basics.',
+    description: 'Stripped-back network: one hidden neuron. Great for learning the basics.',
   },
 };
 
