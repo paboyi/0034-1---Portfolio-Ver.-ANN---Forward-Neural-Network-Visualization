@@ -48,10 +48,13 @@ npm install
 ### Run
 
 ```bash
+cd backend
 npm start
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser.
+Then open [http://localhost:3000](http://localhost:3000) in your browser. //outdated
+open your index.html files as a live server. You should see a url like [http://127.0.0.1:5500/frontend/src/index.html]
+The reason for this change is because the Frontend & Backend were put into 2 separate folders in order to host them both on Vercel & Render respectively. 
 
 ---
 
