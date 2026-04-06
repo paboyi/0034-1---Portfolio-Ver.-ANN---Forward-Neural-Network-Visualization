@@ -37,6 +37,33 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+
+
+
+.renderNotice__text {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--green-glow);
+  font-size: 0.6rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+
+  span {
+    /* background-color: var(--red); */
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    color: var(--red);
+  }
+
+  .strongText {
+    font-size: 0.75rem;
+    color: var(--red);
+  }
+
+}
 /*  Brand mark (top-right logo)  */
 .brand-mark {
   position: fixed;
