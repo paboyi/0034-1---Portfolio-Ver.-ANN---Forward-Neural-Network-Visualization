@@ -13,6 +13,7 @@ const API_BASE = window.location.hostname === 'localhost'
   ? 'http://localhost:3000'
   : 'https://zero034-1-portfolio-ver-ann-forward.onrender.com'; // localhost or Render.com API
 
+
 //  Canvas setup 
 const canvas = document.getElementById('canvas');
 const ctx    = canvas.getContext('2d');
@@ -80,11 +81,6 @@ const gifDiv         = document.getElementById('gifDiv');
 const toHideDiv      = document.querySelector('.toHide');
 const inputHintEl    = document.getElementById('inputHint');
 const legendEl       = document.getElementById('legend');
-
-// For Uptimerobot's interval ping check
-app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok' })
-})
 
 
 //  Preset buttons 

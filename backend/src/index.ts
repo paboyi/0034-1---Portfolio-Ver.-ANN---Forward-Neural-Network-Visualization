@@ -16,8 +16,13 @@ app.use(Express.static(path.join(__dirname))); // serves index.html, styles.css,
 //  Routes 
 app.get('/', (_req: Request, res: Response) => {
   // res.sendFile(path.join(__dirname, 'index.html')); /* vercel now handles frontend */
-  res.status(404).json({ message: 'API only — frontend is on Vercel' })
+  res.status(404).json({ message: 'Backend serves as API only. Frontend is on Vercel' })
 });
+  
+// For Uptimerobot's interval ping check
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' })
+})
 
 /**
  * POST /run-network
