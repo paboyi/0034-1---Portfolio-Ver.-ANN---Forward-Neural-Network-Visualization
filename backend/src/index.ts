@@ -15,7 +15,8 @@ app.use(Express.static(path.join(__dirname))); // serves index.html, styles.css,
 
 //  Routes 
 app.get('/', (_req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  // res.sendFile(path.join(__dirname, 'index.html')); /* vercel now handles frontend */
+  res.status(404).json({ message: 'API only — frontend is on Vercel' })
 });
 
 /**
