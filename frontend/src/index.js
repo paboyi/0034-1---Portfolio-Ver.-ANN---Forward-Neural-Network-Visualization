@@ -81,6 +81,12 @@ const toHideDiv      = document.querySelector('.toHide');
 const inputHintEl    = document.getElementById('inputHint');
 const legendEl       = document.getElementById('legend');
 
+// For Uptimerobot's interval ping check
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' })
+})
+
+
 //  Preset buttons 
 document.querySelectorAll('[data-preset]').forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -170,7 +176,6 @@ function resizeCanvas() {
 }
 
 //  Drawing helpers 
-
 /** Returns the fill colour for a neuron given its layer position and fired state. */
 function neuronColor(layerIndex, isFired, value) {
   const isInput  = layerIndex === 0;
@@ -254,7 +259,7 @@ function drawNetwork(firedMap) {
   drawLayerLabels();
 }
 
-//  Form submission — run forward pass ─
+//  Form submission - run forward pass
 inputForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -319,7 +324,7 @@ inputForm.addEventListener('submit', async (e) => {
   resultDiv.textContent    = 'Output:';
   resultValues.textContent = data.finalOutputs.map((v) => v.toFixed(4)).join('   ');
 
-  // Celebrate 🎉
+  // Celebration GIF 🎉
   gifDiv.style.display = 'block';
   setTimeout(() => { gifDiv.style.display = 'none'; }, 1200);
 });
