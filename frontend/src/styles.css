@@ -54,44 +54,13 @@ body {
   text-align: center;
   line-height: normal;
   
-  .greet {
-    /* background-color: aqua;  */
-    margin: 0px;
-    font-size: 28px;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-  
-  .sub {
-    font-weight: 400;
-    font-style: italic;
-  }
-}
-
-.renderNotice__text {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--green-glow);
-  font-size: 0.6rem;
-  font-weight: 500;
-  padding: 0.5rem 0;
-  margin-bottom: 1rem;
-
   span {
-    /* background-color: var(--red); */
-    font-size: 0.8rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    padding: 0.25rem 0.5rem;
-    color: var(--purple-hi);
+    /* color: red; */
+    font-weight: 500;
   }
-
-  .strongText {
-    font-size: 0.75rem;
-    color: var(--purple-hi);
-  }
-
 }
+
+
 /*  Brand mark (top-right logo)  */
 .brand-mark {
   position: fixed;
