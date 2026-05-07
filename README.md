@@ -102,16 +102,16 @@ Weights are re-initialised on every render — this visualizer demonstrates **fo
 
 ```
 src/
-├── index.ts                          # Express server & API routes
 ├── index.html                        # UI
 ├── index.js                          # Canvas renderer & frontend logic
 ├── styles.css
 ├── img/
 └── lib/
+    └── index.ts                      # Express server & API routes
     └── neuronal-net/
         ├── activation-functions.ts   # Sigmoid activation + fired flag
         ├── neuron.ts                 # Single neuron — weighted sum, activation
-        └── neuronal-net.ts          # Full network — builds layers, runs forward pass
+        └── neuronal-net.ts           # Full network — builds layers, runs forward pass
 ```
 
 ---
