@@ -11,7 +11,7 @@
 
 const API_BASE = window.location.hostname === 'localhost' 
   ? 'http://localhost:3000'
-  : 'https://zero034-1-portfolio-ver-ann-forward.onrender.com'; // localhost or Render.com API
+  : 'https://ai-neuroncanvas.onrender.com'; // localhost or Render.com API
 
 
 //  Canvas setup 
