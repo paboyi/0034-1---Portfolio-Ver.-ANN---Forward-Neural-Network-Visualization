@@ -1,6 +1,6 @@
-# ANN Visualizer — Forward Neural Network
+# ANN Visualizer | Forward Neural Network
 
-An interactive, full-stack tool for building and running your own artificial neural network — from scratch, in real time.
+An interactive, full-stack tool for building and running your own artificial neural network, from scratch, in real time.
 
 Configure the topology, submit inputs, and watch activations propagate live through a canvas-rendered network.
 
@@ -10,11 +10,11 @@ Configure the topology, submit inputs, and watch activations propagate live thro
 
 ## What it does
 
-- **Custom neural network engine** — neurons, weighted connections, sigmoid activation, bias, and forward propagation all implemented manually in TypeScript (no ML libraries)
-- **Live canvas renderer** — draws the network dynamically, colour-codes fired vs unfired neurons in real time
-- **Full-stack architecture** — an Express.js backend receives inputs, runs the computation server-side, and returns results to the frontend
-- **Interactive UI** — configure inputs and hidden layers, pick a preset, submit values, and watch the network light up
-- **Preset scenarios** — XOR gate, multi-class classifier, deep network, and single-neuron examples to get started instantly
+- **Custom neural network engine**: neurons, weighted connections, sigmoid activation, bias, and forward propagation all implemented manually in TypeScript (no ML libraries)
+- **Live canvas renderer**: draws the network dynamically, colour-codes fired vs unfired neurons in real time
+- **Full-stack architecture**: an Express.js backend receives inputs, runs the computation server-side, and returns results to the frontend
+- **Interactive UI**: configure inputs and hidden layers, pick a preset, submit values, and watch the network light up
+- **Preset scenarios**: XOR gate, multi-class classifier, deep network, and single-neuron examples to get started instantly
 
 ---
 
@@ -52,8 +52,8 @@ cd backend
 npm start
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser. //outdated
-open your index.html files as a live server. You should see a url like [http://127.0.0.1:5500/frontend/src/index.html]
+Then open [http://localhost:3000](http://localhost:3000) in your browser. > outdated
+<br /> Open your index.html files as a live server. You should see a url like [http://127.0.0.1:5500/frontend/src/index.html]
 The reason for this change is because the Frontend & Backend were put into 2 separate folders in order to host them both on Vercel & Render respectively. 
 
 ---
@@ -79,7 +79,7 @@ The reason for this change is because the Frontend & Backend were put into 2 sep
 
 ---
 
-## How it works — the math
+## How it works (the math)
 
 Each neuron computes:
 
@@ -94,7 +94,7 @@ Where:
 - `bias` = `0.25` (fixed)
 - A neuron **fires** if `sigmoid(z) > 0.6`
 
-Weights are re-initialised on every render — this visualizer demonstrates **forward propagation only**, not training.
+Weights are re-initialised on every render. This visualizer demonstrates **forward propagation only**, not training.
 
 ---
 
@@ -110,8 +110,8 @@ src/
     └── index.ts                      # Express server & API routes
     └── neuronal-net/
         ├── activation-functions.ts   # Sigmoid activation + fired flag
-        ├── neuron.ts                 # Single neuron — weighted sum, activation
-        └── neuronal-net.ts           # Full network — builds layers, runs forward pass
+        ├── neuron.ts                 # Single neuron - weighted sum, activation
+        └── neuronal-net.ts           # Full network - builds layers, runs forward pass
 ```
 
 ---
@@ -161,7 +161,7 @@ Runs a forward pass through the network.
 The neural network runs on the Express backend rather than in the browser. This separates the ML engine (TypeScript classes) from the rendering logic, demonstrates a real client-server architecture, and makes the TypeScript engine easy to test independently.
 
 **Why no ML library?**  
-Every weight, activation, and propagation step is implemented from scratch. This is intentional — the project demonstrates understanding of the underlying math, not library usage.
+Every weight, activation, and propagation step is implemented from scratch. This is intentional. The project demonstrates understanding of the underlying math, not library usage.
 
 **Why fixed weights (no training)?**  
 This is a forward-propagation visualizer, not a trainer. Weights are randomised on each render to show how the same topology produces different activations depending on initialisation.
