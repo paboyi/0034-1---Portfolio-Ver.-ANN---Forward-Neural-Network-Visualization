@@ -40,7 +40,7 @@ Configure the topology, submit inputs, and watch activations propagate live thro
 ### Installation
 
 ```bash
-git clone https://github.com/paboyi/AI-Thesis---Forward-Neural-Network-Visualization.git
+git clone https://github.com/paboyi/0034a-Portfolio-Ver.-ANN---Forward-Neural-Network-Visualization.git
 cd AI-Thesis---Forward-Neural-Network-Visualization
 npm install
 ```
@@ -182,4 +182,4 @@ This is a forward-propagation visualizer, not a trainer. Weights are randomised 
 Philippa Aboyi
 
 Built as an extension of my BSc AI thesis project.  
-[GitHub](https://github.com/paboyi/AI-Thesis---Forward-Neural-Network-Visualization)
+[Publication](https://essuir.sumdu.edu.ua/items/b2b73188-bf80-4344-9dbd-a1bb34c745b0)
