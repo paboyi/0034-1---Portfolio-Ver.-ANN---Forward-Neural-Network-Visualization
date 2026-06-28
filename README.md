@@ -97,6 +97,13 @@ Where:
 Weights are re-initialised on every render. This visualizer demonstrates **forward propagation only**, not training.
 
 ---
+### Visualization
++-------------+        +----------------+        +------------------+        +------------------+
+|  User Input |  --->  |   Frontend UI  |  --->  |   Backend Logic  |  --->  |   Visualization  |
+| (e.g., 1, 0)|        |(HTML/JS/Canvas)|        | (Node.js + TS)   |        | (Canvas updates) |
++-------------+        +----------------+        +------------------+        +------------------+
+
+---
 
 ## Project structure
 
