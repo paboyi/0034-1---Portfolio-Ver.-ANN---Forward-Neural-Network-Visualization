@@ -179,6 +179,6 @@ This is a forward-propagation visualizer, not a trainer. Weights are randomised 
 ---
 
 ## Author
-Philippa Aboyi /
-[Thesis Publication](https://essuir.sumdu.edu.ua/items/b2b73188-bf80-4344-9dbd-a1bb34c745b0) /
+Philippa Aboyi <br />
+[Thesis Publication](https://essuir.sumdu.edu.ua/items/b2b73188-bf80-4344-9dbd-a1bb34c745b0) <br />
 Built as an extension of my BSc AI thesis project.  
