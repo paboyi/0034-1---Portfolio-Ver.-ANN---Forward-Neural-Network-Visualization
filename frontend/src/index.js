@@ -10,7 +10,7 @@
 'use strict';
 
 const API_BASE = window.location.hostname === 'localhost' 
-  ? 'http://localhost:3000'
+  ? 'http://localhost:1112'
   : 'https://ai-neuroncanvas.onrender.com'; // localhost or Render.com API
 
 
