@@ -20,7 +20,7 @@
 const BACKEND_API = 'http://localhost:1112';
 const BACKEND_API_CLOUD = 'https://gcloud-ann-neuroncanvas-v3-626844155365.europe-west1.run.app';
 
-const API_BASE = ( BACKEND_API_CLOUD || BACKEND_API);
+const API_BASE = (BACKEND_API_CLOUD || BACKEND_API);
 console.info(`[ANN Visualizer (Backend Access)] Using API_BASE = ${API_BASE}`);
 
 
