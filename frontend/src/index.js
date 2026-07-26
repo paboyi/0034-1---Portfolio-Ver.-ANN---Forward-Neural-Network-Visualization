@@ -17,12 +17,11 @@
   
   
 // explicitly needed for vercel which expects a STATIC app
-const API_BASE = (
-  'https://gcloud-ann-neuroncanvas-v3-626844155365.europe-west1.run.app' 
-  || 
-  (window.ENV && window.ENV.API_BASE));
+const BACKEND_API = 'http://localhost:1112';
+const BACKEND_API_CLOUD = 'https://gcloud-ann-neuroncanvas-v3-626844155365.europe-west1.run.app';
 
-console.info(`[ANN Visualizer (Backend Access)] Using API_BASE = ${API_BASE}, \n also called: ${window.ENV.API_BASE}`);
+const API_BASE = ( BACKEND_API_CLOUD || BACKEND_API);
+console.info(`[ANN Visualizer (Backend Access)] Using API_BASE = ${API_BASE}`);
 
 
 
