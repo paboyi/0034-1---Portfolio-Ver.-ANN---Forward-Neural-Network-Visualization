@@ -13,19 +13,18 @@
 
 
 
-// const POSSIBLE_LOCAL_HOSTNAMES = ['localhost', '127.0.0.1', '[::1]', ''];
-
-// const isLocalHost =
-//   POSSIBLE_LOCAL_HOSTNAMES.includes(window.location.hostname) || window.location.protocol === 'file:';
 
 
+const POSSIBLE_LOCAL_HOSTNAMES = ['localhost', '127.0.0.1', '[::1]', ''];
+
+const isLocalHost =
+  POSSIBLE_LOCAL_HOSTNAMES.includes(window.location.hostname) || window.location.protocol === 'file:';
   
-  // explicitly needed for vercel who expects a STATIC app
-const API_BASE = (window.ENV && window.ENV.API_BASE) || process.env.API_BASE;
-
-// const API_BASE =
-// (window.ENV && window.ENV.API_BASE) ||
-// (isLocalHost ? 'http://localhost:3000' : 'https://gcloud-ann-neuroncanvas-v3-626844155365.europe-west1.run.app');
+  
+// explicitly needed for vercel who expects a STATIC app
+const API_BASE =
+(window.ENV && window.ENV.API_BASE) ||
+(isLocalHost ? 'http://localhost:3000' : 'https://gcloud-ann-neuroncanvas-v3-626844155365.europe-west1.run.app');
 
 console.info(`[ANN Visualizer (Backend Access)] Using API_BASE = ${API_BASE}, \n also called: ${window.ENV.API_BASE}`);
 
