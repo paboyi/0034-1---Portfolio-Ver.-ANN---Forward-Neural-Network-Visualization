@@ -9,15 +9,15 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 const app = Express();
+const PORT = process.env.BACKEND_PORT;
 
 
 
 
 
-
-
-//  Middleware 
+//  - - - - - MIDDLEWARE - - - - - 
 app.use(cors()); // allows your Vercel frontend to call this
+
 app.use(Express.json()); // built-in body parser (Express ≥ 4.16)
 app.use(Express.static(path.join(__dirname))); // serves index.html, styles.css, index.js …
 
@@ -81,7 +81,8 @@ app.post('/run-network', (req: Request, res: Response) => {
   }
 });
 
-const PORT = process.env.PORT || 3017;
+
+
 //  Start 
 app.listen(PORT , () => {
   // console.log(`✓ ANN Visualizer running at http://localhost:${process.env.BACKEND_PORT}`);

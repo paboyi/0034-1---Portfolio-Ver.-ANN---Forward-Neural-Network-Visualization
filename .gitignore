@@ -1,6 +1,12 @@
 
 # ENVIRONMENT VARIABLES
-.env
+# all env files
+.env  
+frontend/src/env.js
+
+.DS_Store
 
 node_modules
 package-lock.json
+backend/dist
+

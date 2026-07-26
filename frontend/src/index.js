@@ -5,17 +5,19 @@
  *  1. Collect topology config from the user (inputs, hidden layers, output count)
  *  2. Render the network on an HTML5 Canvas
  *  3. Accept input values, POST them to /run-network, and animate the results
+ *  4. UPDATE: 26.07.2026 - RESPONSIBILITIES HAVE EVOLVED greatly
  */
 
 'use strict';
 
-const API_BASE = window.location.hostname === 'localhost' 
-  ? 'http://localhost:1112'
-  : 'https://gcloud-ann-neuroncanvas-v3-626844155365.europe-west1.run.app'; //Google Cloud Run (26.07.2026)
-  // : 'https://ai-neuroncanvas.onrender.com'; // localhost or Render.com API
 
 
 
+
+
+const API_BASE = (window.ENV && window.ENV.API_BASE);
+
+console.info(`[ANN Visualizer (Backend Access)] Using API_BASE = ${API_BASE}, \n also called: ${window.ENV.API_BASE}`);
 
 
 
@@ -27,7 +29,7 @@ const ctx    = canvas.getContext('2d');
 
 
 //  Layout constants ─
-const NEURON_RADIUS  = 22;    // px — circle radius
+const NEURON_RADIUS  = 22;    // px - circle radius
 const X_SPACING      = 180;   // px — horizontal gap between layers
 const Y_SPACING      = 90;    // px — vertical gap between neurons
 const CANVAS_PADDING = 60;    // px — outer padding
@@ -527,7 +529,6 @@ reopenExplainBtn.addEventListener('click', () => {
 
 const fmt2 = (n) => Number(n).toFixed(2);
 const fmt3 = (n) => Number(n).toFixed(3);
-console.log("fmt2: ", fmt2, "\n fmt3: ", fmt3)
 
 function describeInputLayer(inputArray) {
   const list = inputArray.map(fmt2).join(', ');
