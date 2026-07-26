@@ -42,19 +42,23 @@ Configure the topology, submit inputs, and watch activations propagate live thro
 ```bash
 git clone https://github.com/paboyi/0034a-Portfolio-Ver.-ANN---Forward-Neural-Network-Visualization.git
 cd AI-Thesis---Forward-Neural-Network-Visualization
-npm install
 ```
 
 ### Run
 
 ```bash
 cd backend
+npm run build
+npm start
+
+# OR just
 npm start
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser. > outdated
 <br /> Open your index.html files as a live server. You should see a url like [http://127.0.0.1:5500/frontend/src/index.html]
-The reason for this change is because the Frontend & Backend were put into 2 separate folders in order to host them both on Vercel & Render respectively. 
+The reason for this change is because the Frontend is STATIC & serves no open PORT to the Backend for connection. 
+
+So instead we open tell the Frontend where the Backend is (via code, env files) and let it grab what it needs.
 
 ---
 
