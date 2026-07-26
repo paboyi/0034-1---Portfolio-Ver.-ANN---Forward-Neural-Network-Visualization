@@ -14,11 +14,6 @@
 
 
 
-
-const POSSIBLE_LOCAL_HOSTNAMES = ['localhost', '127.0.0.1', '[::1]', ''];
-
-const isLocalHost =
-  POSSIBLE_LOCAL_HOSTNAMES.includes(window.location.hostname) || window.location.protocol === 'file:';
   
   
 // explicitly needed for vercel which expects a STATIC app
