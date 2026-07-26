@@ -44,7 +44,7 @@ const neuronal_net_1 = __importDefault(require("./lib/neuronal-net/neuronal-net"
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const app = (0, express_1.default)();
-const PORT = process.env.BACKEND_PORT;
+const PORT = process.env.PORT;
 //  - - - - - MIDDLEWARE - - - - - 
 app.use((0, cors_1.default)()); // allows your Vercel frontend to call this
 app.use(express_1.default.json()); // built-in body parser (Express ≥ 4.16)
