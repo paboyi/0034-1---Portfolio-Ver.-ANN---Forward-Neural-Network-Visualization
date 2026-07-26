@@ -21,7 +21,7 @@
 
   
   // explicitly needed for vercel who expects a STATIC app
-const API_BASE = (window.ENV && window.ENV.API_BASE) || ProcessingInstruction.env.API_BASE;
+const API_BASE = (window.ENV && window.ENV.API_BASE) || process.env.API_BASE;
 
 // const API_BASE =
 // (window.ENV && window.ENV.API_BASE) ||
