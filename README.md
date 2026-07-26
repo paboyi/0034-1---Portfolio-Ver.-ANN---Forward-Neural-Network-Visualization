@@ -50,9 +50,6 @@ cd AI-Thesis---Forward-Neural-Network-Visualization
 cd backend
 npm run build
 npm start
-
-# OR just
-npm start
 ```
 
 <br /> Open your index.html files as a live server. You should see a url like [http://127.0.0.1:5500/frontend/src/index.html]
