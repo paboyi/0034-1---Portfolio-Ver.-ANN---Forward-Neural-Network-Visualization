@@ -11,7 +11,8 @@
 
 const API_BASE = window.location.hostname === 'localhost' 
   ? 'http://localhost:1112'
-  : 'https://ai-neuroncanvas.onrender.com'; // localhost or Render.com API
+  : 'https://gcloud-ann-neuroncanvas-v3-626844155365.europe-west1.run.app'; //Google Cloud Run (26.07.2026)
+  // : 'https://ai-neuroncanvas.onrender.com'; // localhost or Render.com API
 
 
 
