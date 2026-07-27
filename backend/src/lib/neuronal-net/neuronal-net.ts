@@ -24,12 +24,12 @@ export interface INetworkOutput {
   eachLayerInputValues: number[][];
 
   /**
-   * Pre-activation weighted sums (z = Σ(xᵢ·wᵢ)  bias) for every neuron —
+   * Pre-activation weighted sums (z = Σ(xᵢ·wᵢ)  bias) for every neuron
    * indexed the same way as firedNeurons (from the first hidden layer onward).
    */
   eachLayerZValues: number[][];
   /**
-   * Connection weights for every neuron — indexed the same way as firedNeurons.
+   * Connection weights for every neuron - indexed the same way as firedNeurons.
    * weights[layerIndex][neuronIndex] is the array of weights that neuron applies
    * to the values coming from the previous layer, in the previous layer's order.
    */

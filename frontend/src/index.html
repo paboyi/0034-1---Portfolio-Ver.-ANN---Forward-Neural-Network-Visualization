@@ -96,8 +96,22 @@
         </div>
       </section>
 
+
+      <div id="explainOverlay" class="modal-overlay">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="explainTitle">
+          <button type="button" id="explainClose" class="modal__close" aria-label="Close explanation">&times;</button>
+          <h2 id="explainTitle" class="modal__title">What just happened? 🧠</h2>
+          <p class="modal__subtitle">Here's what each neuron did during this forward pass, in plain English.</p>
+          <div id="explainBody" class="modal__body"></div>
+          <div class="modal__footer">
+            <button type="button" id="explainGotIt" class="btn btn--run">Got it →</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Step 2: Canvas + inputs (hidden until rendered) -->
       <section class="toHide">
+          <button type="button" id="reopenExplain" class="btn btn--preset explain-link">🧠 Explain this run</button>
 
         <h2 class="section-label">Step 2: View the Network</h2>
         <p class="section-sub">Lines show connections. Labels show layer types.</p>
@@ -115,6 +129,8 @@
         </div>
 
         <p class="canvas-hint">💡 Hover a connection line to see its weight (run the network first).</p>
+
+
 
         <!-- Step 3: Submit values -->
         <h2 class="section-label">Step 3: Submit Values &amp; Run</h2>
@@ -148,7 +164,6 @@
         <div class="output-area">
           <div id="result" class="output__label"></div>
           <div id="resultValues" class="output__values"></div>
-          <button type="button" id="reopenExplain" class="btn btn--preset explain-link">🧠 Explain this run</button>
         </div>
 
         <!-- Celebration -->
@@ -162,18 +177,6 @@
 
 
     <div id="weightTooltip" class="weight-tooltip" role="tooltip"></div>
-
-    <div id="explainOverlay" class="modal-overlay">
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="explainTitle">
-        <button type="button" id="explainClose" class="modal__close" aria-label="Close explanation">&times;</button>
-        <h2 id="explainTitle" class="modal__title">What just happened? 🧠</h2>
-        <p class="modal__subtitle">Here's what each neuron did during this forward pass, in plain English.</p>
-        <div id="explainBody" class="modal__body"></div>
-        <div class="modal__footer">
-          <button type="button" id="explainGotIt" class="btn btn--run">Got it →</button>
-        </div>
-      </div>
-    </div>
 
     <script src="index.js"></script>
   </body>

@@ -236,6 +236,11 @@ body {
 /*  Hidden section  */
 .toHide { display: none; margin-top: 2.5rem; border-top: 1px solid #eee; padding-top: 2.5rem; }
 
+
+
+
+
+
 /*  Canvas  */
 .canvas-wrapper {
   width: fit-content;
@@ -358,9 +363,11 @@ body {
 /*  Explain-this-run link  */
 .explain-link {
   display: none;
-  margin-top: 1rem;
+  margin: 1rem auto;
   font-size: 0.8rem;
+  align-self: center;
 }
+
 .explain-link.show { display: inline-block; }
 
 /*  Weight tooltip  */
@@ -492,6 +499,10 @@ body {
 }
 
 
+/* hover over the connecting lines to see */
+#weightTooltip {
+  background-color: red;
+}
 
 
 /*  Responsive  */

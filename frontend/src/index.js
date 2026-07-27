@@ -215,6 +215,12 @@ renderBtn.addEventListener('click', () => {
   gifDiv.style.display    = 'none';
 });
 
+
+
+
+
+
+
 //  Build neuron data model ─
 function buildNeurons() {
   neurons = [];
@@ -259,6 +265,8 @@ function neuronColor(layerIndex, isFired, value) {
   if (isFired)  return `rgba(172, 255, 48, ${0.5 + value * 0.5})`;
   return `rgba(220, 80, 60, ${0.4 + (1 - value) * 0.4})`;
 }
+
+
 
 
 
@@ -329,6 +337,9 @@ function drawNeurons() {
   });
 }
 
+
+
+
 function drawLayerLabels() {
   const labels = [
     'Input',
@@ -368,6 +379,7 @@ function distanceToSegment(px, py, x1, y1, x2, y2) {
   return Math.hypot(px - projX, py - projY);
 }
 
+
 function findNearestConnection(mx, my) {
   const HOVER_THRESHOLD = 6;
   let best = null;
@@ -386,6 +398,7 @@ function findNearestConnection(mx, my) {
   }
   return best;
 }
+
 
 canvas.addEventListener('mousemove', (e) => {
   if (neurons.length === 0) return;
@@ -417,6 +430,9 @@ canvas.addEventListener('mousemove', (e) => {
 
   drawNetwork(lastFiredMap);
 });
+
+
+
 
 canvas.addEventListener('mouseleave', () => {
   hoveredConnection = null;
@@ -473,13 +489,13 @@ inputForm.addEventListener('submit', async (e) => {
   }
 
   //  Update visual model 
-  // Input layer — show user values
+  // Input layer - show user values
   neurons[0].forEach((neuron, i) => {
     neuron.value = inputArray[i];
     neuron.fired = false;
   });
 
-  // Hidden + output layers — update from server response
+  // Hidden + output layers - update from server response
   data.firedNeurons.forEach((layerFired, li) => {
     layerFired.forEach((fired, ni) => {
       const neuron   = neurons[li + 1][ni];
@@ -540,7 +556,7 @@ function describeInputLayer(inputArray) {
     <div class="explain-section">
       <h3>Layer 1 · Input</h3>
       <p>You gave the network ${inputArray.length} number${inputArray.length === 1 ? '' : 's'}:
-      <strong>${list}</strong>. No maths happens here — each value is just handed
+      <strong>${list}</strong>. No maths happens here. Each value is just handed
       straight to the next layer as-is.</p>
     </div>
   `;
@@ -571,7 +587,7 @@ function describeComputedLayer(label, layerNumber, prevValues, weightsForLayer, 
         ? `Since ${fmt3(value)} &gt; 0.6, it <strong class="fired-text">fired 🟢</strong>.`
         : `Since ${fmt3(value)} ≤ 0.6, it <strong class="unfired-text">did not fire 🔴</strong>.`;
 
-    return `<li><strong>Neuron ${ni + 1}:</strong> ${sumExpr} = ${rawScoreText}
+    return `<li><strong>Neuron ${ni + 1}:</strong> ${sumExpr} = ${rawScoreText} \n \n
       Squashed by sigmoid, that becomes <strong>${fmt3(value)}</strong>. ${verdict}</li>`;
   }).join('');
 

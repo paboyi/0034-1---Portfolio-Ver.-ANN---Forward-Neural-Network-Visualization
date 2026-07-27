@@ -85,6 +85,5 @@ app.post('/run-network', (req: Request, res: Response) => {
 
 //  Start 
 app.listen(PORT , () => {
-  // console.log(`✓ ANN Visualizer running at http://localhost:${process.env.BACKEND_PORT}`);
   console.log(`✓ ANN API running on port ${PORT}`);
 });
